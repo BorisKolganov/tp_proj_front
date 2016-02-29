@@ -1,0 +1,27 @@
+{
+  "name": "lililib",
+  "version": "0.0.1",
+  "description": "frontend",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "books",
+    "matreshka"
+  ],
+  "author": "Boris",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.5.1"
+  },
+  "dependencies": {
+    "director": "^1.2.8",
+    "jquery": "^2.2.0",
+    "matreshka": "^1.7.0",
+    "requirejs": "^2.1.22",
+    "text": "github:requirejs/text",
+    "underscore": "^1.8.3"
+  }
+}
