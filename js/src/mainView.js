@@ -3,11 +3,11 @@ define([
     'viewManager',
     'views/blocks/header',
     'models/user',
-    'views/loginForm',
+    'views/auth/loginForm',
     'views/feed',
-    'views/registrationForm',
-    'views/resetForm',
-    'views/editForm'
+    'views/auth/registrationForm',
+    'views/auth/resetForm',
+    'views/auth/editForm'
 ],
     function(matreshka, viewManager, headerView, user, loginForm, feed, registrationForm, resetForm, editForm) {
     return matreshka.Class({

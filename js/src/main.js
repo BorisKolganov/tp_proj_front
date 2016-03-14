@@ -7,6 +7,17 @@ require.config({
         matreshka: '../lib/matreshka',
         text: '../lib/text',
         bootstrap: '../lib/bootstrap',
+        threexFullscreen: '../lib/threex.Fullscreen',
+        three: '../lib/three',
+        OBJLoader: '../lib/OBJLoader',
+        MTLLoader: '../lib/MTLLoader',
+        DDSLoader: '../lib/DDSLoader',
+        ColladaLoader: '../lib/ColladaLoader',
+        VRManager: '../lib/VRManager',
+        VRPolyfill: '../lib/VRPolyfill',
+        VREffect: '../lib/VREffect',
+        VRControls: '../lib/VRControls'
+
     },
     shim: {
         'underscore': {
@@ -17,6 +28,9 @@ require.config({
         },
         bootstrap : {
             deps :['jquery']
+        },
+        VRManager: {
+            deps: ['VRPolyfill', 'VREffect', 'VRControls']
         }
     }
 });
@@ -30,13 +44,5 @@ define([
     matreshka,
     bootstrap
 ){
-    // var token = localStorage['token']
-    // if (token) {
-    //     $.ajaxSetup({
-    //         beforeSend: function(xhr) {
-    //             xhr.setRequestHeader('Authorization', token);
-    //         }
-    //     });
-    // }
     router.init('/');
 });

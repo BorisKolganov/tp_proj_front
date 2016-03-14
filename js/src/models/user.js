@@ -19,7 +19,7 @@ define(['matreshka'], function(matreshka) {
         },
         logout: function() {
             $.ajax({
-                url: 'http://ec2-52-23-209-14.compute-1.amazonaws.com:8000/users/auth/logout/',
+                url: 'http://vps.0upti.me/users/auth/logout/',
                 type: 'POST',
                 context: this,
                 crossDomain: true,
@@ -41,7 +41,7 @@ define(['matreshka'], function(matreshka) {
         fetch: function(token) {
             if (token.value) {
                 $.ajax({
-                    url: 'http://ec2-52-23-209-14.compute-1.amazonaws.com:8000/users/',
+                    url: 'http://vps.0upti.me/users/',
                     type: 'GET',
                     context: this,
                     beforeSend: function(xhr) {
