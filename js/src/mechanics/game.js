@@ -5,8 +5,9 @@ define(['three', 'VRManager','OBJLoader', 'DDSLoader', 'MTLLoader', 'ColladaLoad
     clock = new THREE.Clock();
     console.log(THREE);
 
-    WIDTH = 800,
-    HEIGHT = 600;
+    // костыли
+    WIDTH = window.screen.availWidth - 12,
+    HEIGHT = 550;
 
     VIEW_ANGLE = 45,
     ASPECT = WIDTH / HEIGHT,
@@ -36,6 +37,13 @@ define(['three', 'VRManager','OBJLoader', 'DDSLoader', 'MTLLoader', 'ColladaLoad
     light.position.set(0, 4, 2);
 
     scene.add(light);
+
+
+    var light2 = new THREE.PointLight( 0xffffff, 500*2*2, 100 );
+    light2.position.set( 0, 4, 2 );
+    scene.add( light2 );
+
+
     var mesh;
     // var loader = new THREE.ColladaLoader();
     //
@@ -74,7 +82,7 @@ define(['three', 'VRManager','OBJLoader', 'DDSLoader', 'MTLLoader', 'ColladaLoad
 
     function render() {
      var time = clock.getElapsedTime();
-     if (mesh) mesh.rotation.y += .01;
+     if (mesh) mesh.rotation.y += .05;
 
 
      renderer.render(scene, camera);

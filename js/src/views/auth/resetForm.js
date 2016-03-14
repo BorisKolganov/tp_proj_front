@@ -52,7 +52,7 @@ define([
                 event.preventDefault();
                 data = JSON.stringify(this.toJSON());
                 $.ajax({
-                    url: 'http://vps.0upti.me/users/auth/password/reset/',
+                    url: 'http://ec2-52-23-209-14.compute-1.amazonaws.com:8000/users/auth/password/reset/',
                     type: 'POST',
                     context: this,
                     crossDomain: true,
